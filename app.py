@@ -5,8 +5,8 @@ import plotly.express as px
 car_data = pd.read_csv('vehicles_us.csv')
 st.header('Visualización de datos')
 
-hist_button = st.checkbox('Construir histograma')  # crear un botón
-if hist_button:  # al hacer clic en el botón
+hist_checkbox = st.checkbox('Construir histograma')  # crear un botón
+if hist_checkbox:  # al hacer clic en el botón
     # escribir un mensaje
     st.write(
         'Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
@@ -17,8 +17,8 @@ if hist_button:  # al hacer clic en el botón
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig1, use_container_width=True)
 
-scatter_button = st.checkbox('Contruir un gráfico de dispersión')
-if scatter_button:
+scatter_checkbox = st.checkbox('Contruir un gráfico de dispersión')
+if scatter_checkbox:
 
     st.write(
         'Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
